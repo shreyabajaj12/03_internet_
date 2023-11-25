@@ -1,0 +1,404 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "monterrat";
+    color:#fff
+}
+html,body{
+    height: 100%;
+    width:100%;
+}
+#nav{
+    height:140px;
+    display:flex;
+    width: 100%;
+    /* background-color: red; */
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 150px;
+    gap:45px;
+    position: fixed;
+    z-index: 99;
+}
+#nav img{
+    height: 75px;
+}
+#nav h4{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+video{
+    height:100%;
+    width:100%;
+    object-fit:cover;
+    position: fixed;
+    z-index: -1;
+}
+#main{
+    position:relative;
+    background-color: rgb(0, 0,0,0.327);
+    
+
+}
+#page1{
+    height:100vh;
+    width:100vh;
+    /* background-color: red; */
+    position:relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    text-align: center;
+    margin-left: 400px;
+    z-index: 10;
+}
+#page1 h1{
+    font-size: 80px;
+    font-weight: 900;
+    /* position: relative; */
+
+}
+#page1 h1::before{
+    content:"ACCESS.GROWTH.INCLUSION.";
+    position:absolute;
+    color: black;
+    top:223px;
+    left:-227px;
+    -webkit-text-stroke: 2px blueviolet;
+    z-index: -1;
+}
+#page1 h2{
+    font-size: 30px;
+    font-weight: 900;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#page1 p{
+    font-size: 20px;
+    font-weight: 900;
+    width: 40%
+}
+#page2{
+    height:100vh;
+    width:100%;
+    z-index: -1;
+}
+#cursor{
+    height:25px;
+    width: 25px;
+    background-color: rgb(20, 111, 168);
+    border-radius: 50%;
+    position: fixed;
+    z-index:99;
+}
+
+#cursor-blur{
+    height:300px;
+    width: 300px;
+    background-color: rgb(138, 197, 239);
+    border-radius: 50%;
+    position: fixed;
+    z-index:9;
+    filter:blur(60px)
+}
+#scroller{
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position:relative;
+    z-index: 10;
+    
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+
+#scroller-1{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroller h4{
+    display :inline-block;
+    font-size: 80px;
+    font-weight: 900;
+    font-family: gilroy;
+    margin-right: 10px;
+    color:transparent;
+    -webkit-text-stroke: 2px rgb(0, 191, 255);
+    transition: all linear 0.5s;
+
+}
+#scroller h4:hover{
+    color: rgb(0, 191, 255);
+}
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%)
+    }
+}
+#aboutus{
+    height: 40vh;
+    width:100%;
+    /* background-color: red; */
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    position:relative;
+    z-index: 10;
+    /* padding: 0 50px */
+
+}
+#aboutus img{
+    height: 220px;
+    width: 220px;
+    border-radius: 50px;
+}
+#aboutus-in{
+    width:40%;
+    text-align: center;
+}
+#aboutus-in h3{
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 40px;
+
+
+}
+#aboutus-in h3:hover{
+    color: pink;}
+#aboutus-in p{
+    font-size: 16px;
+    line-height: 26px;
+}
+#cardscontainer{
+    /* background-color: red; */
+    height:60vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    position: relative;
+    z-index: 10;
+    
+}
+.card{
+    height:80%;
+    width:24%;
+    background-color: blue;
+    border-radius: 20px;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    transition:all ease 0.6s;
+    
+
+}
+#card1{
+    background-image: url(jason-leung-1DjbGRDh7-E-unsplash.jpg);
+    
+}
+#card2{
+    background-image: url(leon-seibert-2m71l9fA6mg-unsplash.jpg);
+}
+#card3{
+    background-image: url(clement-helardot-95YRwf6CNw8-unsplash.jpg);}
+.overlay{
+    height:100%;
+    width:100%;
+    background: linear-gradient(to left bottom, rgb(0, 191, 255),rgb(114, 165, 233),rgb(147, 91, 244)) ;
+    padding-top: 160px;
+    padding: 50px;
+    opacity: 0;
+    transition:all ease 0.6s;
+}
+.overlay h4{
+    color: black;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 700;
+    /* white-space: nowrap;   it is used to align all item in */
+    margin-bottom: 20px;
+    /* object-fit: cover; */
+
+}
+.overlay p{
+    color: black;
+    font-size: 18px;
+}
+.card:hover .overlay{
+    opacity: 1;
+}
+.card:hover{
+    transform:rotate3d(-1,1,0,20deg);
+    
+}
+#green{
+    height: 30vh;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+    position:relative;
+    display:flex;
+    background: linear-gradient(to left bottom, rgb(0, 191, 255),rgb(114, 165, 233),rgb(147, 91, 244));
+    
+    
+
+}
+#green h4{
+    width: 50%;
+    font-size: 23px;
+    text-transform:uppercase;
+    margin-left: 89px;
+    line-height: 40px;
+    text-align: center;
+    margin-left: 350px;
+}
+#page3 {
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+  }
+  #page3 > p {
+    font-size: 35px;
+    font-weight: 700;
+    width: 60%;
+    line-height: 45px;
+    text-align: center;
+  }
+  
+  #page3 img {
+    position: absolute;
+    height: 60px;
+  }
+  #page3 #colon1 {
+    left: 15%;
+    top: 25%;
+  }
+  #page3 #colon2 {
+    bottom: 30%;
+    right: 15%;
+  }
+  #page4 {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    position: relative;
+  }
+  .elem {
+    height: 70%;
+    width: 26%;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+  }
+  
+  .elem h2 {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(114, 165, 233);
+    display: flex;
+    color: #000;
+    font-weight: 800;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.5s;
+    font-size: 2vw;
+    position: absolute;
+    z-index: 10;
+  }
+  .elem img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease 0.5s;
+    scale: 1.1;
+  }
+  .elem:hover h2 {
+    color: #fff;
+    background-color: transparent;
+  }
+  .elem:hover img {
+    scale: 1;
+  }
+  #page4 h1 {
+    font-size: 5.4vw;
+    position: absolute;
+    top: -15%;
+    font-weight: 900;
+    font-family: gilroy;
+    color: #000;
+    -webkit-text-stroke: 2px #fff;
+  }
+  #footer {
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(to left bottom,  rgb(0, 191, 255),rgb(114, 165, 233),rgb(147, 91, 244));
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6.5vw;
+    padding: 0 100px;
+  }
+  #footer > img {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    z-index: 0;
+  }
+  #f1 img {
+    height: 100px;
+  }
+  #f1,
+  #f2,
+  #f3,
+  #f4 {
+    width: fit-content;
+    position: relative;
+    z-index: 99;
+    /* background-color: red; */
+  }
+  #f2 h3 {
+    font-size: 1.6vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 900;
+    margin-bottom: 8px;
+  }
+  
+  #f3 h3 {
+    font-size: 1.6vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+  #f4 h4 {
+    font-size: 1vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
